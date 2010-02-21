@@ -31,8 +31,11 @@
   (apply map (fn [& xs] xs) colls))
 
 ; why do I have to do this?
-; there's an int and num function that should work (based on docs) but don't
-; not on strings anyway.. int does work on chars but returns ascii values
+;
+; there's an int and num function that should work (based on docs) but don't --
+; at least they don't on strings.. int does work on chars but returns ascii value
+; and both raise an error on strings from what I've seen
+;
 ; if you know, hit me up on twitter: @abica
 (defn to-int
   "coerce (str)i into an integer"
