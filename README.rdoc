@@ -1,0 +1,16 @@
+= Description
+Lights out is a simple puzzle game where the goal is to get all of
+the lights either on or off.
+
+Toggling the light of a room on or off will also toggle the room's
+adjacent neighbors on or off.
+
+= Notes
+This game was written specifically for the terminal and uses ansi
+terminal display colors and clearing so I somehow don't expect this
+game to run on a windows machine.
+
+It's known to work on OS X 10.5 but will likely work on any ansi terminal.
+
+Sometime in the future I may put a swing interface on it, but for now
+it was more fun to use escape sequences.

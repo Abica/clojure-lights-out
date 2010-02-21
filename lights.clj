@@ -127,6 +127,7 @@
     (+ (* x num-cols) y)))
 
 (defn locate-neighbors
+  "returns all existing adjacent neighbors"
   [x y xs]
   (filter (partial get xs)
           (map (partial apply locate-room)
