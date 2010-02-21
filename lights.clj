@@ -26,6 +26,7 @@
          x
          (flip (xs x))))
 
+; from http://gist.github.com/17283
 (defn zip [& colls]
   (apply map (fn [& xs] xs) colls))
 
