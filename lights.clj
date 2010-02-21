@@ -137,7 +137,8 @@
                (rest (re-find #"\s?(\d+),\s?(\d+)" address)))]
       [x y (locate-room x y)]))
   ([x y]
-    (+ (* x num-cols) y)))
+    (if (every? number? [x y])
+      (+ (* x num-cols) y))))
 
 (defn locate-neighbors
   "returns all existing adjacent neighbors"
