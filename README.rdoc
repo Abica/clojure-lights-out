@@ -14,3 +14,6 @@ It's known to work on OS X 10.5 but will likely work on any ansi terminal.
 
 Sometime in the future I may put a swing interface on it, but for now
 it was more fun to use escape sequences.
+
+= Running it
+  clj lights.clj
