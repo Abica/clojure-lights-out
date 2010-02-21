@@ -8,10 +8,20 @@
 (def ansi-blue "\033[34m")
 (def ansi-terminator "\033[0m")
 
-(defn on? [x] (= :on x))
-(defn on [x] :on)
-(defn flip [x] (if (= :on x) :off :on))
-(defn flip-at [x xs]
+(defn on? "is x on?"
+  [x]
+  (= :on x))
+
+(defn on "return the on state" [x] :on)
+
+(defn flip
+  "flips the value of x"
+  [x]
+  (if (= :on x) :off :on))
+
+(defn flip-at
+  "returns a copy of xs with the state of the cell at x toggled"
+  [x xs]
   (assoc xs
          x
          (flip (xs x))))
@@ -24,10 +34,13 @@
 ; not on strings anyway.. int does work on chars but returns ascii values
 ; if you know, hit me up on twitter: @abica
 (defn to-int
+  "coerce (str)i into an integer"
   [i]
   (Integer. i))
 
-(defn colorize-light [x]
+(defn colorize-light
+  "return an appropriately colored version of x"
+  [x]
   (str (if (on? x)
           ansi-yellow
           ansi-blue)
