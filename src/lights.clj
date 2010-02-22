@@ -147,15 +147,23 @@
     (if (every? number? [x y])
       (+ (* y num-cols) x))))
 
+(defn in-bounds?
+  [x y]
+  (and (>= x 0)
+       (>= y 0)
+       (< x num-cols)
+       (< y num-rows)))
+
 (defn locate-neighbors
   "returns all existing adjacent neighbors"
   [x y xs]
   (filter (partial get xs)
           (map (partial apply locate-room)
-               [[(- x 1) y]
-                [x (- y 1)]
-                [(+ x 1) y]
-                [x (+ y 1)]])))
+            (filter (partial apply in-bounds?)
+                 [[(- x 1) y]
+                  [x (- y 1)]
+                  [(+ x 1) y]
+                  [x (+ y 1)]]))))
 
 (defn toggle-room
   "toggle a room and it's neighbors"

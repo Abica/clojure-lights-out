@@ -64,6 +64,12 @@
   (is (= (locate-room "sdsd") [nil nil nil]))
   (is (= (locate-room 4 3)     19)))
 
+(deftest test-in-bounds?
+  (is (in-bounds? 4 3))
+  (is (in-bounds? 0 0))
+  (is (in-bounds? 4 4))
+  (is (not (in-bounds? 23 44))))
+
 (deftest test-locate-neighbors
   (let [xs (vec (range 25))]
     (is (= (locate-neighbors 40 -2 xs) []))
