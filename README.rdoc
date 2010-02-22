@@ -15,5 +15,17 @@ It's known to work on OS X 10.5 but will likely work on any ansi terminal.
 Sometime in the future I may put a swing interface on it, but for now
 it was more fun to use escape sequences.
 
-= Running it
-  clj lights.clj
+= Requirements
+In order to build lights-out-clojure you will need the leiningen build tool.
+
+If you don't have it already, get it now, it rocks:
+  cd ~/bin
+  wget http://github.com/technomancy/leiningen/raw/stable/bin/lein
+  chmod +x lein
+  lein self-install
+
+= Build it
+  lein uberjar
+
+= Run it
+  java -jar lights-out-standalone.jar
