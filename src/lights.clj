@@ -1,4 +1,6 @@
-(ns lights)
+(ns lights
+ (:gen-class))
+
 (def valid-room-states [:on :off])
 (def num-cols 5)
 (def num-rows 5)
@@ -69,7 +71,8 @@
 (defn draw-rooms
   "compose the grid of lights"
   [xs]
-  (let [left-gutter (concat ["  "] (map (fn [x] [x " "]) (range 5)))]
+  (let [left-gutter (concat ["  "]
+                            (map (fn [x] [x " "]) (range 5)))]
     (apply str (interpose "\n"
       (map (fn [row] (apply str (apply concat row)))
            (zip left-gutter (concat [" 0  1  2  3  4"]
@@ -211,8 +214,9 @@
     (blit-screen ys)
     (recur (handle-choice (read-line) ys))))
 
-; initialize grid
-(def grid (create-grid grid-size))
+(defn -main [& args]
+  ; initialize grid
+  (def grid (create-grid grid-size))
 
-; play game
-(play grid)
+  ; play game
+  (play grid))
