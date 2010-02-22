@@ -6,7 +6,7 @@ Toggling the light of a room on or off will also toggle the room's
 adjacent neighbors on or off.
 
 = Notes
-Since his game was written specifically for the terminal, and uses ansi
+Since this game was written specifically for the terminal, and uses ansi
 terminal display colors and clearing, I somehow doubt it will work properly
 on a windows machine though I could be surprised.
 
