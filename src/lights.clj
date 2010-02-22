@@ -145,7 +145,7 @@
       [x y (locate-room x y)]))
   ([x y]
     (if (every? number? [x y])
-      (+ (* x num-cols) y))))
+      (+ (* y num-cols) x))))
 
 (defn locate-neighbors
   "returns all existing adjacent neighbors"

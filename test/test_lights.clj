@@ -60,16 +60,16 @@
   (is      (check-for-win [:off :off :off :off])))
 
 (deftest test-locate-room
-  (is (= (locate-room "4,3")  [4 3 23]))
+  (is (= (locate-room "4,3")  [4 3 19]))
   (is (= (locate-room "sdsd") [nil nil nil]))
-  (is (= (locate-room 4 3)     23)))
+  (is (= (locate-room 4 3)     19)))
 
 (deftest test-locate-neighbors
   (let [xs (vec (range 25))]
     (is (= (locate-neighbors 40 -2 xs) []))
-    (is (= (locate-neighbors 0 0 xs)   [5 1]))
-    (is (= (locate-neighbors 2 2 xs)   [7 11 17 13]))
-    (is (= (locate-neighbors 4 4 xs)   [19 23]))))
+    (is (= (locate-neighbors 0 0 xs)   [1 5]))
+    (is (= (locate-neighbors 2 2 xs)   [11 7 13 17]))
+    (is (= (locate-neighbors 4 4 xs)   [23 19]))))
 
 (deftest test-new-game
   (let [solved (repeat 25 :on)]
