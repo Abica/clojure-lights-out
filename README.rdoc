@@ -16,9 +16,9 @@ Sometime in the future I may put a swing interface on it, but for now
 it was more fun to use escape sequences.
 
 = Requirements
-In order to build lights-out-clojure you will need the leiningen[link:http://github.com/technomancy/leiningen/] build tool.
+In order to build lights-out-clojure you will need the {leiningen}[http://github.com/technomancy/leiningen/] build tool.
 
-If you don't have it already, get it now, it rocks[link:http://zef.me/2470/building-clojure-projects-with-leiningen]:
+If you don't have it already, get it now, it {rocks}[http://zef.me/2470/building-clojure-projects-with-leiningen]:
   cd ~/bin
   wget http://github.com/technomancy/leiningen/raw/stable/bin/lein
   chmod +x lein
