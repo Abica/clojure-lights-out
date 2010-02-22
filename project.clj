@@ -1,4 +1,4 @@
-(defproject lights-out "1.0"
+(defproject lights-out "1.1"
   :description "The game of lights out written in clojure"
   :url "http://github.com/Abica/clojure-lights-out"
   :dependencies [[org.clojure/clojure "1.1.0"]
