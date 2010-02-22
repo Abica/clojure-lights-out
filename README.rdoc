@@ -29,3 +29,6 @@ If you don't have it already, get it now. It {rocks}[http://zef.me/2470/building
 
 = Run it
   java -jar lights-out-standalone.jar
+
+= Run the tests
+  lein test
