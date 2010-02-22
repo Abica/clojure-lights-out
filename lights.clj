@@ -158,7 +158,6 @@
   "toggle a room and it's neighbors"
   [args xs]
   (let [[x y address] (locate-room args) ys (vec xs)]
-      (println x y address)
     (if (get ys address)
       (reduce (fn [zs z] (flip-at z zs))
               ys
