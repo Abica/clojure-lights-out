@@ -119,7 +119,9 @@
   "display a list of available options"
   [args xs]
   (display-banner
-    "Welcome to lights out! The game is simple. The to get all of the lights either on or off."
+    "Welcome to lights out!"
+    ""
+    "The goal is simple. Try to get all of the lights either on or off."
     "Toggling a light on or off also toggles it's adjacent neighbors."
     "\nHere are some options:"
     "\th\tShow this help page"
