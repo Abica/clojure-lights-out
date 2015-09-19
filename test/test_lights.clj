@@ -48,7 +48,7 @@
 
 (deftest test-create-grid
   (let [xs (create-grid 25)]
-    (is (= (count xs)) 25)))
+    (is (= (count xs) 25))))
 
 (deftest test-number-of-rooms-on
   (is (= (number-of-rooms-on [:on :off :on :off :on :on])
